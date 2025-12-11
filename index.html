@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Due - Master Your Subscriptions</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-infinity"></i> Due   
+              </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-auth">
+                <a href="#" class="btn-text">Sign In</a>
+                <a href="#" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-shield-halved"></i> Your personal subscription tracker
+            </div>
+            <h1 class="hero-title">
+                Keep your subscriptions <br>
+                under <span class="highlight-box"><i class="fa-solid fa-sliders"></i> control</span>
+            </h1>
+            <p class="hero-subtitle">
+                Too many subscriptions, not enough clarity? Manage them all. <br>
+                Cancel the waste, and keep paying only for what's worth it.
+            </p>
+
+            <!-- Floating Icons (Surrounding Text) -->
+            <div class="hero-icons">
+                <div class="floating-icon icon-netflix"><i class="fa-solid fa-n"></i></div>
+                <div class="floating-icon icon-spotify"><i class="fa-brands fa-spotify"></i></div>
+                <div class="floating-icon icon-apple"><i class="fa-brands fa-apple"></i></div>
+                <div class="floating-icon icon-xbox"><i class="fa-brands fa-xbox"></i></div>
+                <div class="floating-icon icon-youtube"><i class="fa-brands fa-youtube"></i></div>
+                <div class="floating-icon icon-discord"><i class="fa-brands fa-discord"></i></div>
+                <div class="floating-icon icon-dropbox"><i class="fa-brands fa-dropbox"></i></div>
+                <div class="floating-icon icon-snapchat"><i class="fa-brands fa-snapchat"></i></div>
+            </div>
+
+            <a href="#" class="btn btn-dark">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="styled-hr"></div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful features,<br>simple control</h2>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Calendar Card -->
+                <div class="bento-card calendar-card">
+                    <div class="card-header">
+                        <span>January 2024</span>
+                    </div>
+                    <div class="calendar-mockup">
+                        <!-- CSS Grid Calendar Mockup -->
+                        <div class="cal-grid">
+                            <div class="cal-day">1</div>
+                            <div class="cal-day">2</div>
+                            <div class="cal-day">3</div>
+                            <div class="cal-day">4</div>
+                            <div class="cal-day active">5</div>
+                            <div class="cal-day">6</div>
+                            <div class="cal-day">7</div>
+                            <div class="cal-day">8</div>
+                            <div class="cal-day">9</div>
+                            <div class="cal-day">10</div>
+                            <div class="cal-day">11</div>
+                            <div class="cal-day">12</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Card -->
+                <div class="bento-card analytics-card">
+                    <div class="chart-circle">
+                        <span class="price">$125</span>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item"><span class="dot red"></span>Netflix</div>
+                        <div class="legend-item"><span class="dot blue"></span>Spotify</div>
+                        <div class="legend-item"><span class="dot green"></span>Adobe</div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Card -->
+                <div class="bento-card mobile-card">
+                    <div class="phone-mockup">
+                        <div class="notch"></div>
+                        <div class="screen">
+                            <div class="time">9:41</div>
+                            <div class="app-item">
+                                <i class="fa-brands fa-spotify"></i>
+                                <div class="app-info">
+                                    <span>Spotify</span>
+                                    <small>$12.99/mo</small>
+                                </div>
+                            </div>
+                            <div class="app-item">
+                                <i class="fa-brands fa-netflix"></i>
+                                <div class="app-info">
+                                    <span>Netflix</span>
+                                    <small>$15.99/mo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Helper Card -->
+                <div class="bento-card ai-card">
+                    <div class="ai-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="ai-text">
+                        <h3>AI bot helper</h3>
+                        <p>Tracks your subscriptions 24/7, updates plans automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section id="steps" class="steps-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Get started in just<br>3 simple steps</h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <span class="step-label">STEP ONE</span>
+                    <h3>Create Account</h3>
+                    <div class="step-visual step-1-visual"></div>
+                </div>
+                <div class="step-card">
+                    <span class="step-label">STEP TWO</span>
+                    <h3>Add Subscriptions</h3>
+                    <div class="step-visual step-2-visual"></div>
+                </div>
+                <div class="step-card">
+                    <span class="step-label">STEP THREE</span>
+                    <h3>Stay in Control</h3>
+                    <div class="step-visual step-3-visual"></div>
+                </div>
+            </div>
+
+            <div class="cta-container">
+                <a href="#" class="btn btn-dark">Make 1 step <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Plans and Pricing</h2>
+                <p class="section-subtitle">Transparency pricing tailored to your needs, ensuring affordability without
+                    compromising on quality.</p>
+
+                <div class="pricing-toggle">
+                    <span class="toggle-label active">Monthly</span>
+                    <div class="toggle-switch">
+                        <div class="toggle-circle"></div>
+                    </div>
+                    <span class="toggle-label">Annual <span class="save-badge">Save 15%</span></span>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <span class="plan-name">Basic</span>
+                        <div class="plan-price">
+                            <span class="currency">$</span>0<span class="period">/mo</span>
+                        </div>
+                        <p class="plan-desc">For people who just want the essentials</p>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark full-width">Get Started for free <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Unlimited tracked subscriptions</li>
+                        <li><i class="fa-solid fa-check"></i> Flexible payment options</li>
+                        <li><i class="fa-solid fa-check"></i> Monthly spending summary</li>
+                        <li><i class="fa-solid fa-check"></i> Real-time analytical dashboarding</li>
+                    </ul>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge"><i class="fa-solid fa-bolt"></i> Most popular</div>
+                    <div class="plan-header">
+                        <span class="plan-name">Professional</span>
+                        <div class="plan-price">
+                            <span class="currency">$</span>12<span class="period">/mo</span>
+                        </div>
+                        <p class="plan-desc">Deeper insights and automation</p>
+                    </div>
+                    <a href="#" class="btn btn-light full-width">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Everything in Basic</li>
+                        <li><i class="fa-solid fa-check"></i> Auto-categorization</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced analytics</li>
+                        <li><i class="fa-solid fa-check"></i> Cancel with one-tap (where supported)</li>
+                        <li><i class="fa-solid fa-check"></i> Priority support</li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <span class="plan-name">Enterprise</span>
+                        <div class="plan-price">
+                            <span class="currency">$</span>99<span class="period">/mo</span>
+                        </div>
+                        <p class="plan-desc">Full auto-pilot for strict peace of mind</p>
+                    </div>
+                    <a href="#" class="btn btn-dark full-width">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+                        <li><i class="fa-solid fa-check"></i> AI cancellation assistant</li>
+                        <li><i class="fa-solid fa-check"></i> Renewal predictions</li>
+                        <li><i class="fa-solid fa-check"></i> Multi-currency support</li>
+                        <li><i class="fa-solid fa-check"></i> Export and integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Frequently<br>Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        How does the app track my subscriptions automatically?
+                        <span class="faq-icon"><i class="fa-solid fa-xmark"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Users usually wonder if they need to add everything manually or if the app scans emails, bank
+                            statements, etc. We use secure bank integration to automatically detect recurring payments.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will the app notify me before a subscription renews?
+                        <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! You can set custom alerts for each subscription to get notified days before a renewal
+                            payment is due.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is my financial and personal data secure?
+                        <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We use bank-level encryption and never store your banking credentials. Your data
+                            is yours alone.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I cancel subscriptions through the app?
+                        <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For supported services, we offer a one-tap cancellation feature. For others, we provide
+                            direct links and step-by-step guides.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+        <div class="container text-center">
+            <div class="cta-content">
+                <h2>Take control of your<br>subscriptions today.</h2>
+                <p>Too many subscriptions, not enough clarity? Manage them all in one place,<br>cancel the waste, and
+                    keep paying only for what's worth it.</p>
+                <a href="#" class="btn btn-dark btn-lg">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <!-- Decorative elements to mimic hands/objects -->
+            <div class="cta-decoration left-decor"></div>
+            <div class="cta-decoration right-decor"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-infinity"></i> Due
+                    </div>
+                    <p>The smart way to manage every subscription in one place.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get the App</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn"><i class="fa-brands fa-apple"></i> App Store</a>
+                        <a href="#" class="app-btn"><i class="fa-brands fa-google-play"></i> Google Play</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Testimonials</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Due. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
