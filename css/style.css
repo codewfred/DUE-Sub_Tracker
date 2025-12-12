@@ -283,9 +283,9 @@ ul {
 /* Left Side */
 .icon-netflix {
     color: #E50914;
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
+    bottom: 25%;
+    right: 10%;
+    animation-delay: 2.5s;
 }
 
 .icon-spotify {
@@ -321,9 +321,9 @@ ul {
 
 .icon-snapchat {
     color: #FFFC00;
-    bottom: 25%;
-    right: 10%;
-    animation-delay: 2.5s;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
 }
 
 /* Bottom Side */
@@ -387,6 +387,16 @@ ul {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     background: linear-gradient(145deg, #151515 0%, #1A1A1A 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-card::after {
+    content: "Track all your subscription renewals in one synchronized calendar view.";
+    margin-top: auto;
+    padding-top: 16px;
+    color: var(--text-secondary);
+    font-size: 14px;
 }
 
 .card-header {
@@ -436,6 +446,14 @@ ul {
     position: relative;
 }
 
+.analytics-card::after {
+    content: "Get detailed insights into your spending habits and monthly costs.";
+    margin-top: 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+}
+
 .chart-circle {
     width: 140px;
     height: 140px;
@@ -448,20 +466,6 @@ ul {
     justify-content: center;
     margin-bottom: 24px;
     position: relative;
-}
-
-.chart-circle::after {
-    content: '';
-    position: absolute;
-    top: -12px;
-    left: -12px;
-    right: -12px;
-    bottom: -12px;
-    border-radius: 50%;
-    border: 12px solid transparent;
-    border-left-color: #888;
-    transform: rotate(45deg);
-    opacity: 0.3;
 }
 
 .chart-circle .price {
@@ -509,11 +513,21 @@ ul {
     align-items: center;
     justify-content: center;
     padding: 40px;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mobile-card::after {
+    content: "Manage your subscriptions on the go with our powerful mobile app.";
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
 }
 
 .phone-mockup {
     width: 100%;
-    height: 100%;
+    flex: 1;
+    min-height: 0;
     background: var(--bg-color);
     border-radius: 32px;
     border: 8px solid #2A2A2A;
@@ -527,7 +541,7 @@ ul {
 .notch {
     width: 40%;
     height: 24px;
-    background: #000;
+    background:rgb(246, 246, 246);
     margin: 0 auto;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -539,16 +553,30 @@ ul {
 }
 
 .screen {
-    padding: 40px 20px 20px;
+    padding: 15px 20px 20px;
     flex: 1;
     background: #000;
+    position: relative;
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 4px;
 }
 
 .time {
-    text-align: center;
+    position: static;
     font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.battery {
+    position: static;
+    font-size: 12px;
+    color: var(--text-primary);
 }
 
 .app-item {
@@ -570,18 +598,17 @@ ul {
     color: #1DB954;
 }
 
-.app-item .fa-netflix {
-    color: #E50914;
+.app-item .fa-snapchat {
+    color: #FFFC00;
 }
 
-.app-info {
-    display: flex;
-    flex-direction: column;
+.app-item .fa-youtube {
+    color: #FF0000;
 }
 
 .app-info span {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .app-info small {
@@ -596,7 +623,7 @@ ul {
     align-items: center;
     gap: 24px;
     background: #1D1D1F;
-    color: var(--white);
+    color: var(--text-primary);
 }
 
 .ai-icon {
@@ -616,19 +643,18 @@ ul {
 }
 
 .ai-text p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
 }
-
 /* Steps Section */
 .steps-section {
-    padding: 100px 0;
+    padding: 100px;
 }
 
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 25px;
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -904,7 +930,7 @@ ul {
 }
 
 .pricing-card.featured {
-    background: linear-gradient(145deg, #1A1A1A 0%, #0A0A0A 100%);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.25), rgba(59, 130, 246, 0.25), rgba(0, 243, 255, 0.25)), linear-gradient(145deg, #1A1A1A 0%, #0A0A0A 100%);
     border: 1px solid rgba(255, 255, 255, 0.15);
     transform: scale(1.05);
     z-index: 2;
@@ -1117,20 +1143,20 @@ ul {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(0, 243, 255, 0.15) 50%, transparent 70%);
     border-radius: 50%;
     z-index: 1;
-    filter: blur(40px);
+    filter: blur(60px);
 }
 
 .left-decor {
-    left: -100px;
+    left: -150px;
 }
 
 .right-decor {
-    right: -100px;
+    right: -150px;
 }
 
 /* Footer */
