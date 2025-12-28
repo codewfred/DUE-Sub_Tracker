@@ -1478,68 +1478,6 @@ ul {
     animation: none !important;
 }
 
-/* Auth Page Styles */
-.auth-wrapper {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 24px 40px;
-    background: var(--bg-color);
-}
-
-.auth-card {
-    width: 100%;
-    max-width: 400px;
-    background: var(--white);
-    border-radius: 24px;
-    padding: 40px;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-md);
-}
-
-.auth-header {
-    text-align: center;
-    margin-bottom: 32px;
-}
-
-.auth-header h2 {
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-.auth-header p {
-    color: var(--text-secondary);
-    font-size: 14px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-label {
-    display: block;
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
-}
-
-.form-input {
-    width: 100%;
-    background: #0A0A0A;
-    border: 1px solid var(--glass-border);
-    padding: 12px 16px;
-    border-radius: 12px;
-    color: var(--text-primary);
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-.form-input:focus {
-    border-color: var(--text-primary);
-    outline: none;
-}
-
 /* Responsive Refinements */
 @media (max-width: 992px) {
     .steps-section {
@@ -1578,19 +1516,6 @@ ul {
 
     .cta-content p {
         font-size: 16px;
-    }
-
-    /* Auth Responsive */
-    .auth-wrapper {
-        align-items: flex-start;
-        padding-top: 100px;
-    }
-
-    .auth-card {
-        padding: 24px;
-        background: transparent;
-        border: none;
-        box-shadow: none;
     }
 
     /* Bento Grid Mobile Fixes */
