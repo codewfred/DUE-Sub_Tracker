@@ -142,7 +142,7 @@ ul {
 
 /* Hero Section */
 .hero-section {
-    padding-top: 140px;
+    padding-top: 180px;
     padding-bottom: 0;
     text-align: center;
     position: relative;
@@ -1311,154 +1311,7 @@ ul {
     }
 }
 
-/* Styled HR */
-/* Styled HR */
-.styled-hr {
-    width: 100%;
-    max-width: 800px;
-    height: 40px;
-    /* Increased height for curve */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    /* Creates the curve */
-    margin: 100px auto 0;
-    /* Moved down */
-    position: relative;
-    background: transparent;
-    /* Removed linear gradient background */
-}
-
-.styled-hr::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    /* Position at bottom border */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #fff, transparent);
-    box-shadow: 0 0 15px #fff;
-}
-
-/* Final Styled HR */
-.styled-hr {
-    width: 100%;
-    max-width: 1200px;
-    border-bottom: 2px solid #00F3FF;
-    margin: 100px auto 0;
-    position: relative;
-    background: transparent;
-}
-
-.styled-hr::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #fff, transparent);
-    box-shadow: 0 0 20px #fff;
-    opacity: 0.8;
-}
-
-/* Adjusted Header HR */
-.styled-hr {
-    width: 140%;
-    margin-left: -20%;
-    max-width: 1200px;
-    height: 40px;
-    border-bottom: 2px solid #00F3FF;
-    border-radius: 50%;
-    margin-top: 80px;
-    margin-bottom: 0;
-    position: relative;
-    background: transparent;
-}
-
-/* Navbar Spacing Fix */
-.nav-container {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    justify-content: normal;
-    /* Reset flex property */
-}
-
-.logo {
-    justify-self: start;
-}
-
-.nav-links {
-    justify-self: center;
-}
-
-.nav-auth {
-    justify-self: end;
-}
-
-/* Extended Header HR */
-/* Extended Header HR */
-.styled-hr {
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
-    max-width: none;
-    height: 150px;
-    border-bottom: 2px solid #00F3FF;
-    border-radius: 50%;
-    margin-top: 80px;
-    margin-bottom: 0;
-    position: relative;
-    background: transparent;
-}
-
-@keyframes lightning-flicker {
-    0% {
-        box-shadow: 0 0 4px #00F3FF, 0 0 10px #00F3FF inset;
-        opacity: 1;
-    }
-
-    25% {
-        box-shadow: 0 0 15px #00F3FF, 0 0 20px #00F3FF inset;
-        opacity: 1;
-    }
-
-    50% {
-        box-shadow: 0 0 2px #ff0000, 0 0 5px #e10606 inset;
-        opacity: 0.8;
-    }
-
-    75% {
-        box-shadow: 0 0 12px #00F3FF, 0 0 18px #00F3FF inset;
-        opacity: 1;
-    }
-
-    100% {
-        box-shadow: 0 0 5px #00F3FF, 0 0 12px #00F3FF inset;
-        opacity: 0.9;
-    }
-}
-
-/* Lightning Effect Header HR */
-.styled-hr {
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
-    max-width: none;
-    height: 100px;
-    border-bottom: 2px solid #00F3FF;
-    border-radius: 50%;
-    margin-top: 40px;
-    margin-bottom: 0;
-    position: relative;
-    background: transparent;
-
-}
-
-/* Reflecting Light Header HR */
+/* Styled HR (Curved Separator) */
 .styled-hr {
     width: 100vw;
     margin-left: -50vw;
@@ -1471,12 +1324,6 @@ ul {
     margin-bottom: 0;
     position: relative;
     background: transparent;
-
-}
-
-/* Force disable animation */
-.styled-hr {
-    animation: none !important;
 }
 
 /* Auth Page Styles */
@@ -1555,7 +1402,7 @@ ul {
     }
 
     .hero-section {
-        padding-top: 160px;
+        padding-top: 200px;
         min-height: auto;
         padding-bottom: 60px;
     }
