@@ -1096,16 +1096,20 @@ ul {
     padding: 0 24px;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--text-secondary);
     font-size: 14px;
     line-height: 1.6;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .faq-item.active .faq-answer {
     padding-bottom: 24px;
     max-height: 200px;
     /* Approximate max height */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .faq-item.active .faq-icon {
