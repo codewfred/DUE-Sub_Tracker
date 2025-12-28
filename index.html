@@ -23,6 +23,101 @@
 
     <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        /* Positioning to avoid text overlap */
+        .icon-snapchat {
+            top: 15%;
+            left: 10%;
+            color: #FFFC00;
+        }
+
+        .icon-spotify {
+            top: 50%;
+            left: 3%;
+            transform: translateY(-50%);
+            color: #1DB954;
+        }
+
+        .icon-dropbox {
+            bottom: 25%;
+            left: 10%;
+            color: #0061FF;
+        }
+
+        .icon-xbox {
+            top: 15%;
+            right: 10%;
+            color: #107C10;
+        }
+
+        .icon-apple {
+            top: 50%;
+            right: 3%;
+            transform: translateY(-50%);
+            color: #FFFFFF;
+        }
+
+        .icon-netflix {
+            bottom: 25%;
+            right: 10%;
+            color: #E50914;
+        }
+
+        .icon-youtube {
+            bottom: 10%;
+            left: 35%;
+            color: #FF0000;
+        }
+
+        .icon-discord {
+            bottom: 10%;
+            right: 35%;
+            color: #5865F2;
+        }
+
+        @media (max-width: 768px) {
+            .floating-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -31,8 +126,8 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <i class="fa-solid fa-infinity"></i> Due   
-              </div>
+                <i class="fa-solid fa-infinity"></i> Due
+            </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
@@ -40,37 +135,38 @@
             </div>
             <div class="nav-auth">
                 <a href="auth.html" class="btn-text">Sign In</a>
-                <a href="auth.html?mode=signup" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="auth.html?mode=signup" class="btn btn-primary">Get Started <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header id="hero" class="hero-section">
-        <div class="container hero-content">
+        <!-- Floating Icons (Moved outside container for full width positioning) -->
+        <div class="hero-icons">
+            <div class="floating-icon icon-netflix"><i class="fa-solid fa-n"></i></div>
+            <div class="floating-icon icon-spotify"><i class="fa-brands fa-spotify"></i></div>
+            <div class="floating-icon icon-apple"><i class="fa-brands fa-apple"></i></div>
+            <div class="floating-icon icon-xbox"><i class="fa-brands fa-xbox"></i></div>
+            <div class="floating-icon icon-youtube"><i class="fa-brands fa-youtube"></i></div>
+            <div class="floating-icon icon-discord"><i class="fa-brands fa-discord"></i></div>
+            <div class="floating-icon icon-dropbox"><i class="fa-brands fa-dropbox"></i></div>
+            <div class="floating-icon icon-snapchat"><i class="fa-brands fa-snapchat"></i></div>
+        </div>
+
+        <div class="container hero-content text-center">
             <div class="hero-badge">
                 <i class="fa-solid fa-shield-halved"></i> Your personal subscription tracker
             </div>
             <h1 class="hero-title">
-                Keep your subscriptions <br>
-                under <span class="highlight-box"><i class="fa-solid fa-sliders"></i> control</span>
+                Keep your subscriptions <br> under <span class="highlight-box"><i class="fa-solid fa-sliders"></i>
+                    control</span>
             </h1>
             <p class="hero-subtitle">
-                Too many subscriptions, not enough clarity? Manage them all. <br>
-                Cancel the waste, and keep paying only for what's worth it.
+                Too many subscriptions, not enough clarity? Manage them all. Cancel the waste, and keep paying only for
+                what's worth it.
             </p>
-
-            <!-- Floating Icons (Surrounding Text) -->
-            <div class="hero-icons">
-                <div class="floating-icon icon-netflix"><i class="fa-solid fa-n"></i></div>
-                <div class="floating-icon icon-spotify"><i class="fa-brands fa-spotify"></i></div>
-                <div class="floating-icon icon-apple"><i class="fa-brands fa-apple"></i></div>
-                <div class="floating-icon icon-xbox"><i class="fa-brands fa-xbox"></i></div>
-                <div class="floating-icon icon-youtube"><i class="fa-brands fa-youtube"></i></div>
-                <div class="floating-icon icon-discord"><i class="fa-brands fa-discord"></i></div>
-                <div class="floating-icon icon-dropbox"><i class="fa-brands fa-dropbox"></i></div>
-                <div class="floating-icon icon-snapchat"><i class="fa-brands fa-snapchat"></i></div>
-            </div>
 
             <a href="auth.html?mode=signup" class="btn btn-dark">Get Started <i class="fa-solid fa-arrow-right"></i></a>
             <div class="styled-hr"></div>
@@ -195,7 +291,8 @@
             </div>
 
             <div class="cta-container">
-                <a href="auth.html?mode=signup" class="btn btn-dark">Make 1 step <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="auth.html?mode=signup" class="btn btn-dark">Make 1 step <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -247,7 +344,8 @@
                         </div>
                         <p class="plan-desc">Deeper insights and automation</p>
                     </div>
-                    <a href="auth.html?mode=signup" class="btn btn-light full-width">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="auth.html?mode=signup" class="btn btn-light full-width">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
                     <ul class="plan-features">
                         <li><i class="fa-solid fa-check"></i> Everything in Basic</li>
                         <li><i class="fa-solid fa-check"></i> Auto-categorization</li>
@@ -266,7 +364,8 @@
                         </div>
                         <p class="plan-desc">Full auto-pilot for strict peace of mind</p>
                     </div>
-                    <a href="auth.html?mode=signup" class="btn btn-dark full-width">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="auth.html?mode=signup" class="btn btn-dark full-width">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
                     <ul class="plan-features">
                         <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
                         <li><i class="fa-solid fa-check"></i> AI cancellation assistant</li>
@@ -290,7 +389,7 @@
                 <div class="faq-item active">
                     <div class="faq-question">
                         How does the app track my subscriptions automatically?
-                        <span class="faq-icon"><i class="fa-solid fa-xmark"></i></span>
+                        <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
                         <p>Users usually wonder if they need to add everything manually or if the app scans emails, bank
@@ -339,7 +438,8 @@
                 <h2>Take control of your<br>subscriptions today.</h2>
                 <p>Too many subscriptions, not enough clarity? Manage them all in one place,<br>cancel the waste, and
                     keep paying only for what's worth it.</p>
-                <a href="auth.html?mode=signup" class="btn btn-dark btn-lg">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="auth.html?mode=signup" class="btn btn-dark btn-lg">Get Started <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
             <!-- Decorative elements to mimic hands/objects -->
             <div class="cta-decoration left-decor"></div>

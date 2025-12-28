@@ -2,7 +2,7 @@
 
 **Due** is a modern, high-performance landing page for a subscription tracking application. It is designed to help users manage their recurring payments, cancel unwanted subscriptions, and gain financial clarity.
 
-## 🚀 Features
+## Features
 
 -   **Sleek Dark Mode Design**: A premium, dark-themed aesthetic with neon accents and glassmorphism effects.
 -   **Interactive Hero Section**: Features floating 3D-style icons and a dynamic background glow.
@@ -11,7 +11,7 @@
 -   **GSAP Animations**: Smooth entrance animations and scroll-triggered effects for a polished user experience.
 -   **Responsive**: Fully optimized for desktop, tablet, and mobile devices.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **HTML5**: Semantic structure.
 -   **CSS3**: Custom properties (variables), Flexbox, Grid, and animations. No external CSS frameworks were used, ensuring a lightweight footprint.
@@ -20,21 +20,9 @@
 -   **FontAwesome**: Provides the vector icons used throughout the site.
 -   **Google Fonts**: Uses 'Inter' for a clean, modern typography.
 
-## 📂 Architecture & File Structure
 
-The project follows a simple, standard web development structure to ensure ease of maintenance and deployment.
 
-```
-SUBTRACKER/
-├── css/
-│   └── style.css       # Main stylesheet: Contains all styling rules and design system variables.
-├── js/
-│   └── main.js         # Application logic: Handles GSAP animations, pricing toggle, and FAQ.
-├── index.html          # Main landing page: Semantic HTML5 structure.
-└── README.md           # Project documentation
-```
-
-## 🧩 Key Components
+## Key Components
 
 ### Hero Section
 The entry point of the site. It features a headline, subheadline, call-to-action (CTA), and a dynamic background.
@@ -48,7 +36,7 @@ A modular grid layout that showcases different aspects of the product (Calendar,
 Displays three tiers of pricing with a toggle for monthly vs. annual billing.
 -   **Implementation**: The toggle uses a simple checkbox logic visually represented by a sliding circle. JavaScript listens for clicks, toggles a class, and updates the DOM text for prices.
 
-## 🎨 Design System
+## Design System
 
 -   **Colors**:
     -   Background: `#050505` (Deep Black) for an OLED-friendly, premium look.
@@ -59,7 +47,7 @@ Displays three tiers of pricing with a toggle for monthly vs. annual billing.
     -   **Glassmorphism**: `backdrop-filter: blur(20px)` and semi-transparent backgrounds create a sense of hierarchy and depth.
     -   **Glows**: `box-shadow` and radial gradients are used to create "light sources" behind elements.
 
-## 💡 Thought Process & Design Decisions
+## Thought Process & Design Decisions
 
 Here is the rationale behind the significant effects and features added to the landing page:
 
@@ -91,12 +79,12 @@ By arranging them in a grid, the user perceives the product as a complete ecosys
 **Goal**: To maintain context and depth.
 **Reasoning**: In a dark interface, solid cards can feel heavy and blocky. Glassmorphism (semi-transparent backgrounds with blur) allows the background glow to bleed through slightly. This makes the UI elements feel lightweight and floating, keeping the interface airy despite the dark color palette.
 
-## 📦 Setup & Usage
+## Setup & Usage
 
 1.  **Clone or Download** the repository.
 2.  **Open `index.html`** in your preferred web browser.
 3.  No build step or server is required for the basic version, but a local server (like Live Server) is recommended for the best experience with assets and routing.
 
-## 📄 License
+## License
 
 This project is open-source and available for personal and commercial use.

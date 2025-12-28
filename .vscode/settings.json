@@ -2,5 +2,6 @@
     "cSpell.words": [
         "dashboarding",
         "GSAP"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

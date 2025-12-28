@@ -150,7 +150,7 @@ ul {
     /* Establish stacking context */
     perspective: 1000px;
     /* For 3D transforms */
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -541,7 +541,7 @@ ul {
 .notch {
     width: 40%;
     height: 24px;
-    background:rgb(246, 246, 246);
+    background: rgb(246, 246, 246);
     margin: 0 auto;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -646,6 +646,7 @@ ul {
     color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
 }
+
 /* Steps Section */
 .steps-section {
     padding: 100px;
@@ -754,6 +755,11 @@ ul {
 
 /* Responsive */
 @media (max-width: 1024px) {
+
+
+
+
+
     .hero-title {
         font-size: 48px;
     }
@@ -1088,6 +1094,7 @@ ul {
     justify-content: center;
     font-size: 12px;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .faq-answer {
@@ -1420,7 +1427,7 @@ ul {
     }
 
     50% {
-        box-shadow: 0 0 2px #00F3FF, 0 0 5px #00F3FF inset;
+        box-shadow: 0 0 2px #ff0000, 0 0 5px #e10606 inset;
         opacity: 0.8;
     }
 
@@ -1460,7 +1467,7 @@ ul {
     height: 100px;
     border-bottom: 2px solid #00F3FF;
     border-radius: 50%;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 0;
     position: relative;
     background: transparent;
@@ -1470,4 +1477,168 @@ ul {
 /* Force disable animation */
 .styled-hr {
     animation: none !important;
+}
+
+/* Auth Page Styles */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px 40px;
+    background: var(--bg-color);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    background: var(--white);
+    border-radius: 24px;
+    padding: 40px;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-header h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    background: #0A0A0A;
+    border: 1px solid var(--glass-border);
+    padding: 12px 16px;
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: var(--text-primary);
+    outline: none;
+}
+
+/* Responsive Refinements */
+@media (max-width: 992px) {
+    .steps-section {
+        padding: 80px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-section {
+        padding-top: 160px;
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
+    .floating-icon {
+        transform: scale(0.7);
+        opacity: 0.4;
+    }
+
+    .steps-section {
+        padding: 60px 20px;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .cta-content h2 {
+        font-size: 32px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+    }
+
+    /* Auth Responsive */
+    .auth-wrapper {
+        align-items: flex-start;
+        padding-top: 100px;
+    }
+
+    .auth-card {
+        padding: 24px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    /* Bento Grid Mobile Fixes */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .calendar-card,
+    .analytics-card,
+    .mobile-card,
+    .ai-card {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .mobile-card {
+        height: auto;
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* Tablet Layout Adjustments */
+@media (max-width: 1024px) {
+
+    /* Move HR line downwards */
+    .styled-hr {
+        margin-top: 80px !important;
+    }
+
+    /* Move icons up */
+    .hero-icons {
+        transform: translateY(-80px) !important;
+    }
 }
