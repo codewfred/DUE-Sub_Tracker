@@ -60,16 +60,16 @@ ul {
 }
 
 .btn-primary {
-    background: var(--white);
-    color: var(--text-primary);
-    border: 1px solid var(--glass-border);
+    background: var(--accent-color);
+    color: #000;
+    border: 1px solid var(--accent-color);
     box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
-    background: #252525;
+    background: #e0e0e0;
 }
 
 .btn-dark {
@@ -1574,3 +1574,4 @@ ul {
         transform: none !important;
     }
 }
+
