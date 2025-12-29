@@ -1066,7 +1066,7 @@ ul {
     border-radius: 16px;
     border: 1px solid var(--glass-border);
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .faq-question {
@@ -1076,6 +1076,8 @@ ul {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    touch-action: manipulation;
+    /* Removes 300ms delay on mobile */
     color: var(--text-primary);
 }
 
@@ -1096,12 +1098,13 @@ ul {
     padding: 0 24px;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, transform 0.3s ease;
     color: var(--text-secondary);
     font-size: 14px;
     line-height: 1.6;
     opacity: 0;
     transform: translateY(-10px);
+    will-change: max-height, opacity, transform;
 }
 
 .faq-item.active .faq-answer {
