@@ -1569,3 +1569,8 @@ ul {
         transform: translateY(-80px) !important;
     }
 }
+@media (max-width: 768px) {
+    .hero-icons {
+        transform: none !important;
+    }
+}
