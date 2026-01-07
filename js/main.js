@@ -45,21 +45,20 @@ function initAnimations() {
             ease: "back.out(1.7)"
         }, "-=0.4");
 
-    // Scroll Animations for Features
-    gsap.utils.toArray('.bento-card').forEach((card, i) => {
-        gsap.from(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: "top 85%",
-                toggleActions: "play none none reverse"
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
-            delay: i * 0.1,
-            ease: "power3.out"
+    // Scroll Animation for Video
+    const videoWrapper = document.querySelector('.video-container-wrapper');
+    const videoElement = document.getElementById('featureVideo');
+
+    if (videoWrapper && videoElement) {
+        ScrollTrigger.create({
+            trigger: videoWrapper,
+            start: "top 80%",
+            onEnter: () => videoElement.play(),
+            onEnterBack: () => videoElement.play(),
+            onLeave: () => videoElement.pause(),
+            onLeaveBack: () => videoElement.pause()
         });
-    });
+    }
 }
 
 // Pricing Toggle
@@ -116,23 +115,63 @@ function initPricingToggle() {
     }
 }
 
-// FAQ Interactivity
+// FAQ Interactivity (GSAP)
 function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+
+        // Initial set (ensure closed)
+        gsap.set(answer, { height: 0, opacity: 0 });
 
         question.addEventListener('click', () => {
-            // Close other items (Accordion style)
+            const isActive = item.classList.contains('active');
+
+            // Close all others
             faqItems.forEach(otherItem => {
                 if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherIcon = otherItem.querySelector('.faq-icon');
+
+                    gsap.to(otherAnswer, {
+                        height: 0,
+                        opacity: 0,
+                        paddingBottom: 0,
+                        duration: 0.3,
+                        ease: "power2.inOut"
+                    });
+                    gsap.to(otherIcon, { rotation: 0, duration: 0.3 });
                 }
             });
 
-            // Toggle current item
-            item.classList.toggle('active');
+            // Toggle current
+            if (!isActive) {
+                // Open
+                item.classList.add('active');
+                gsap.to(answer, {
+                    height: "auto",
+                    opacity: 1,
+                    paddingBottom: 24,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+                gsap.to(icon, { rotation: 45, duration: 0.3 });
+            } else {
+                // Close
+                item.classList.remove('active');
+                gsap.to(answer, {
+                    height: 0,
+                    opacity: 0,
+                    paddingBottom: 0,
+                    duration: 0.3,
+                    ease: "power2.inOut"
+                });
+                gsap.to(icon, { rotation: 0, duration: 0.3 });
+            }
         });
     });
 }

@@ -5,32 +5,36 @@
 ## Features
 
 -   **Sleek Dark Mode Design**: A premium, dark-themed aesthetic with neon accents and glassmorphism effects.
--   **Interactive Hero Section**: Features floating 3D-style icons and a dynamic background glow.
--   **Bento Grid Layout**: A modern, responsive grid showcasing key features like calendar views, analytics, and mobile app mockups.
+-   **Interactive Hero Section**: Features a dynamic brand icon list and a refined gradient text effect.
+-   **Video Feature Showcase**: A high-impact, auto-playing video section demonstrating the app in action, replacing the traditional bento grid for a more immersive experience.
 -   **Pricing Toggle**: Interactive monthly/annual pricing switch with real-time price updates.
--   **GSAP Animations**: Smooth entrance animations and scroll-triggered effects for a polished user experience.
--   **Responsive**: Fully optimized for desktop, tablet, and mobile devices.
+-   **Refined Animations**:
+    -   **FAQ**: Seamless, custom-eased cubic-bezier expansions.
+    -   **ScrollTriggers**: Optimized scroll interactions for the video and other elements.
+-   **Responsive**: Meticulously tuned for all devices:
+    -   **Desktop**: Full layout.
+    -   **Tablet**: Balanced spacing and adjusted typography ranges.
+    -   **Mobile**: Fluid layouts, optimized touch targets.
+    -   **Ultra-Small Mobile (<360px)**: Dedicated scaling for compact devices.
 
 ## Tech Stack
 
 -   **HTML5**: Semantic structure.
 -   **CSS3**: Custom properties (variables), Flexbox, Grid, and animations. No external CSS frameworks were used, ensuring a lightweight footprint.
 -   **JavaScript (ES6+)**: Handles interactivity and DOM manipulation.
--   **GSAP (GreenSock Animation Platform)**: Powers the complex animations and scroll effects.
+-   **GSAP (GreenSock Animation Platform)**: Powers the complex scroll effects and ScrollTrigger interactions.
 -   **FontAwesome**: Provides the vector icons used throughout the site.
 -   **Google Fonts**: Uses 'Inter' for a clean, modern typography.
-
-
 
 ## Key Components
 
 ### Hero Section
-The entry point of the site. It features a headline, subheadline, call-to-action (CTA), and a dynamic background.
--   **Implementation**: Uses `position: relative` for the container and `position: absolute` for the floating icons to create a layered depth effect.
+The entry point of the site. It features a headline, subheadline, call-to-action (CTA), and a row of brand icons representing subscription services.
+-   **Refinements**: Text sizes and margins are specifically tuned for each device breakpoint. The brand icons float up with a subtle pulse animation.
 
-### Bento Grid (Features)
-A modular grid layout that showcases different aspects of the product (Calendar, Analytics, Mobile App, AI).
--   **Implementation**: Built using CSS Grid (`display: grid`). The `.bento-card` class provides a unified glassmorphic look, while specific modifier classes (e.g., `.calendar-card`) handle unique internal layouts.
+### Feature Video
+A prominent video frame (`fam.mp4`) that showcases the application's interface.
+-   **Implementation**: A responsive video container with a custom gradient border. Use of `mix-blend-mode` or overlaid gradients ensures it sits perfectly within the dark theme.
 
 ### Pricing Section
 Displays three tiers of pricing with a toggle for monthly vs. annual billing.
@@ -53,31 +57,19 @@ Here is the rationale behind the significant effects and features added to the l
 
 ### Why Dark Mode & Neon Accents?
 **Goal**: To convey "Premium Utility" and "Focus".
-**Reasoning**: Financial tools can often feel boring or stressful (white spreadsheets). By using a deep dark mode with subtle neon glows, we transform the experience into something that feels high-tech, secure, and "cool". It mimics the aesthetic of modern developer tools and premium SaaS products, appealing to a tech-savvy audience.
+**Reasoning**: Financial tools can often feel boring. By using a deep dark mode with subtle neon glows, we transform the experience into something that feels high-tech and "cool".
 
-### Why Floating 3D Icons in the Hero?
-**Goal**: To visualize "Controlled Chaos".
-**Reasoning**: The problem statement is "too many subscriptions". Instead of just saying that, we visualized it. The icons (Netflix, Spotify, etc.) float around the user, representing the cloud of services they pay for. The central text ("Keep your subscriptions under control") anchors the composition, visually demonstrating that the product brings order to this floating chaos.
+### Why a Video Showcase instead of Static Images?
+**Goal**: To show "Living Value".
+**Reasoning**: We replaced the static bento grid with a video because showing the app in motion creates a stronger emotional connection and demonstrates immediate value. The video is kept static (no scroll fly-in) to ensure it is immediately visible and accessible.
 
-### Why a Bento Grid for Features?
-**Goal**: To show "Multifaceted Value" at a glance.
-**Reasoning**: A standard list of features can be boring. The "Bento Grid" (popularized by Apple and linear.app) allows us to show *visual proofs* of the features simultaneously.
--   The **Calendar** shows *planning*.
--   The **Chart** shows *analytics*.
--   The **Phone** shows *mobility*.
-By arranging them in a grid, the user perceives the product as a complete ecosystem rather than just a list of functions.
+### Why "Ultra-Small" Mobile Support?
+**Goal**: Universal Accessibility.
+**Reasoning**: We noticed that standard mobile breakpoints often neglect older or smaller devices (like the iPhone SE). By adding a `<360px` breakpoint, we ensure the brand promise of "Control" extends to the visual stability of the page itself—no broken text or overflowing layouts, regardless of device size.
 
-### Why the "Lightning" Separator?
-**Goal**: To guide the eye and add energy.
-**Reasoning**: A straight line separator is functional but dull. The curved, glowing line acts as a visual path, leading the user's eye from the Hero section down into the Features. The "energy" of the line reinforces the idea of the product being active and powerful.
-
-### Why GSAP Animations?
-**Goal**: To create a "Silky Smooth" feel.
-**Reasoning**: Standard CSS transitions are great for hovers, but for complex entrance sequences (elements fading in one by one), GSAP provides superior control. The staggered animations on load (Navbar -> Text -> Buttons) make the page feel like it's "booting up", reinforcing the software/tech theme.
-
-### Why Glassmorphism?
-**Goal**: To maintain context and depth.
-**Reasoning**: In a dark interface, solid cards can feel heavy and blocky. Glassmorphism (semi-transparent backgrounds with blur) allows the background glow to bleed through slightly. This makes the UI elements feel lightweight and floating, keeping the interface airy despite the dark color palette.
+### Why Custom Bezier Curves for FAQ?
+**Goal**: "Invisible" Polish.
+**Reasoning**: Default linear or ease-out transitions can feel robotic. By tuning the cubic-bezier curve to `0.645, 0.045, 0.355, 1`, we mimic the physics of a high-quality mechanical switch, making the site feel faster and more responsive without changing the actual load times.
 
 ## Setup & Usage
 

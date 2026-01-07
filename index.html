@@ -143,34 +143,44 @@
 
     <!-- Hero Section -->
     <header id="hero" class="hero-section">
-        <!-- Floating Icons (Moved outside container for full width positioning) -->
-        <div class="hero-icons">
-            <div class="floating-icon icon-netflix"><i class="fa-solid fa-n"></i></div>
-            <div class="floating-icon icon-spotify"><i class="fa-brands fa-spotify"></i></div>
-            <div class="floating-icon icon-apple"><i class="fa-brands fa-apple"></i></div>
-            <div class="floating-icon icon-xbox"><i class="fa-brands fa-xbox"></i></div>
-            <div class="floating-icon icon-youtube"><i class="fa-brands fa-youtube"></i></div>
-            <div class="floating-icon icon-discord"><i class="fa-brands fa-discord"></i></div>
-            <div class="floating-icon icon-dropbox"><i class="fa-brands fa-dropbox"></i></div>
-            <div class="floating-icon icon-snapchat"><i class="fa-brands fa-snapchat"></i></div>
-        </div>
+        <div class="hero-glow-tl"></div>
+        <div class="hero-glow-br"></div>
+
+
 
         <div class="container hero-content text-center">
-            <div class="hero-badge">
-                <i class="fa-solid fa-shield-halved"></i> Your personal subscription tracker
+            <div class="hero-badge-pill">
+                <span class="badge-tag">New feature</span>
+                <span class="badge-text">Check out the team dashboard <i class="fa-solid fa-arrow-right"></i></span>
             </div>
             <h1 class="hero-title">
                 Keep your subscriptions <br> under <span class="highlight-box"><i class="fa-solid fa-sliders"></i>
                     control</span>
             </h1>
             <p class="hero-subtitle">
-                Too many subscriptions, not enough clarity? Manage them all. Cancel the waste, and keep paying only for
+                Too many subscriptions? Manage them all and stop surprise charges. Cancel the waste,
+                and keep paying only for
                 what's worth it.
             </p>
 
-            <a href="" class="btn btn-dark"> <i class="fa-solid fa-arrow-right"></i></a>
-            <br>
-            <div class="styled-hr"></div>
+            <div class="hero-buttons" style="display: flex; gap: 16px; justify-content: center;">
+                <button class="btn btn-dark"><i class="fa-solid fa-circle-play"></i> Watch Demo</button>
+                <a href="auth.html?mode=signup" class="btn btn-primary">Get started for free</a>
+            </div>
+
+
+            <div class="hero-brands">
+                <p class="brands-label">Compatible with all your favorites</p>
+                <div class="brands-grid">
+                    <i class="fa-brands fa-spotify"></i>
+                    <i class="fa-brands fa-apple"></i>
+                    <i class="fa-brands fa-xbox"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-dropbox"></i>
+                    <i class="fa-brands fa-snapchat"></i>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -178,89 +188,16 @@
     <section id="features" class="features-section">
         <div class="container">
             <div class="section-header">
-                <h2>Powerful features,<br>simple control</h2>
+                <h2>Powerful features,<br>simple control.</h2>
             </div>
 
-            <div class="bento-grid">
-                <!-- Calendar Card -->
-                <div class="bento-card calendar-card">
-                    <div class="card-header">
-                        <span>January 2024</span>
-                    </div>
-                    <div class="calendar-mockup">
-                        <!-- CSS Grid Calendar Mockup -->
-                        <div class="cal-grid">
-                            <div class="cal-day">1</div>
-                            <div class="cal-day">2</div>
-                            <div class="cal-day">3</div>
-                            <div class="cal-day">4</div>
-                            <div class="cal-day active">5</div>
-                            <div class="cal-day">6</div>
-                            <div class="cal-day">7</div>
-                            <div class="cal-day">8</div>
-                            <div class="cal-day">9</div>
-                            <div class="cal-day">10</div>
-                            <div class="cal-day">11</div>
-                            <div class="cal-day">12</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Analytics Card -->
-                <div class="bento-card analytics-card">
-                    <div class="chart-circle">
-                        <span class="price">$125</span>
-                    </div>
-                    <div class="chart-legend">
-                        <div class="legend-item"><span class="dot red"></span>Snapchat</div>
-                        <div class="legend-item"><span class="dot blue"></span>Spotify</div>
-                        <div class="legend-item"><span class="dot green"></span>Adobe</div>
-                    </div>
-                </div>
-
-                <!-- Mobile App Card -->
-                <div class="bento-card mobile-card">
-                    <div class="phone-mockup">
-                        <div class="notch"></div>
-                        <div class="screen">
-                            <div class="mobile-header">
-                                <div class="time">9:41</div>
-                                <div class="battery"><i class="fa-solid fa-battery-full"></i></div>
-                            </div>
-                            <div class="app-item">
-                                <i class="fa-brands fa-spotify"></i>
-                                <div class="app-info">
-                                    <span>Spotify</span>
-                                    <small>$12.99/mo</small>
-                                </div>
-                            </div>
-                            <div class="app-item">
-                                <i class="fa-brands fa-snapchat"></i>
-                                <div class="app-info">
-                                    <span>Snapchat</span>
-                                    <small>$3.99/mo</small>
-                                </div>
-                            </div>
-                            <div class="app-item">
-                                <i class="fa-brands fa-youtube"></i>
-                                <div class="app-info">
-                                    <span>YouTube</span>
-                                    <small>$11.99/mo</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Helper Card -->
-                <div class="bento-card ai-card">
-                    <div class="ai-icon">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <div class="ai-text">
-                        <h3>AI bot helper</h3>
-                        <p>Tracks your subscriptions 24/7, updates plans automatically.</p>
-                    </div>
+            <div class="video-container-wrapper">
+                <div class="video-border-gradient"></div>
+                <div class="video-container">
+                    <video id="featureVideo" muted playsinline loop>
+                        <source src="fam.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
