@@ -105,6 +105,7 @@ ul {
 
 .navbar.scrolled {
     background: rgba(3, 0, 20, 0.8);
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -117,6 +118,7 @@ ul {
     padding: 12px 24px;
     border-radius: 100px;
     border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     max-width: 1000px;
     margin: 0 auto;
@@ -1155,6 +1157,23 @@ ul {
         padding-top: 140px;
         min-height: auto;
         padding-bottom: 60px;
+    }
+
+    /* Mobile Hero Lights */
+    .hero-glow-tl {
+        width: 350px;
+        height: 350px;
+        top: -80px;
+        left: -80px;
+        filter: blur(60px);
+    }
+
+    .hero-glow-br {
+        width: 350px;
+        height: 350px;
+        bottom: -80px;
+        right: -80px;
+        filter: blur(60px);
     }
 
     .steps-section {
